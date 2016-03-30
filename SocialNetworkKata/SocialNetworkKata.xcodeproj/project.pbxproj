@@ -1,0 +1,343 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		074BE6CA1CAC5A58004AEEDE /* SocialNetworkKataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074BE6C91CAC5A58004AEEDE /* SocialNetworkKataTest.swift */; };
+		074BE6D01CAC5B01004AEEDE /* SocialNetworkKata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074BE6CF1CAC5B01004AEEDE /* SocialNetworkKata.swift */; };
+		074BE6D11CAC5B01004AEEDE /* SocialNetworkKata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074BE6CF1CAC5B01004AEEDE /* SocialNetworkKata.swift */; };
+		AE7C2EFDB73F9A8BC4E6281E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2F73982DEB80AA68A3F0 /* main.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AE7C2171A8D3284BC616B613 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		074BE6C71CAC5A58004AEEDE /* SocialNetworkKataTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialNetworkKataTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		074BE6C91CAC5A58004AEEDE /* SocialNetworkKataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetworkKataTest.swift; sourceTree = "<group>"; };
+		074BE6CB1CAC5A58004AEEDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		074BE6CF1CAC5B01004AEEDE /* SocialNetworkKata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialNetworkKata.swift; sourceTree = "<group>"; };
+		AE7C2BDA09631149DC8A9620 /* SocialNetworkKata */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SocialNetworkKata; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE7C2F73982DEB80AA68A3F0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		074BE6C41CAC5A58004AEEDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE7C2D5C6CAFE3A95A63F81A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		074BE6C81CAC5A58004AEEDE /* SocialNetworkKataTest */ = {
+			isa = PBXGroup;
+			children = (
+				074BE6C91CAC5A58004AEEDE /* SocialNetworkKataTest.swift */,
+				074BE6CB1CAC5A58004AEEDE /* Info.plist */,
+			);
+			path = SocialNetworkKataTest;
+			sourceTree = "<group>";
+		};
+		AE7C20B582D69C7CE966EF90 /* SocialNetworkKata */ = {
+			isa = PBXGroup;
+			children = (
+				AE7C2F73982DEB80AA68A3F0 /* main.swift */,
+				074BE6CF1CAC5B01004AEEDE /* SocialNetworkKata.swift */,
+			);
+			path = SocialNetworkKata;
+			sourceTree = "<group>";
+		};
+		AE7C21E5CA85C112AE2F27D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE7C2BDA09631149DC8A9620 /* SocialNetworkKata */,
+				074BE6C71CAC5A58004AEEDE /* SocialNetworkKataTest.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AE7C2FC3A67EA43FB96BC33F = {
+			isa = PBXGroup;
+			children = (
+				074BE6C81CAC5A58004AEEDE /* SocialNetworkKataTest */,
+				AE7C21E5CA85C112AE2F27D8 /* Products */,
+				AE7C20B582D69C7CE966EF90 /* SocialNetworkKata */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		074BE6C61CAC5A58004AEEDE /* SocialNetworkKataTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 074BE6CC1CAC5A58004AEEDE /* Build configuration list for PBXNativeTarget "SocialNetworkKataTest" */;
+			buildPhases = (
+				074BE6C31CAC5A58004AEEDE /* Sources */,
+				074BE6C41CAC5A58004AEEDE /* Frameworks */,
+				074BE6C51CAC5A58004AEEDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SocialNetworkKataTest;
+			productName = SocialNetworkKataTest;
+			productReference = 074BE6C71CAC5A58004AEEDE /* SocialNetworkKataTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AE7C273A52C8531E62EC6899 /* SocialNetworkKata */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE7C2D0AFC4BA6B19207DC60 /* Build configuration list for PBXNativeTarget "SocialNetworkKata" */;
+			buildPhases = (
+				AE7C2D7D1CC91618E456372D /* Sources */,
+				AE7C2D5C6CAFE3A95A63F81A /* Frameworks */,
+				AE7C2171A8D3284BC616B613 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SocialNetworkKata;
+			productName = SocialNetworkKata;
+			productReference = AE7C2BDA09631149DC8A9620 /* SocialNetworkKata */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AE7C2A37B01D4EA32F55FE33 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftMigration = 0730;
+				LastSwiftUpdateCheck = 0730;
+				ORGANIZATIONNAME = "___FULLUSERNAME___";
+				TargetAttributes = {
+					074BE6C61CAC5A58004AEEDE = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = AE7C24ADF93A17626BD8D890 /* Build configuration list for PBXProject "SocialNetworkKata" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AE7C2FC3A67EA43FB96BC33F;
+			productRefGroup = AE7C21E5CA85C112AE2F27D8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AE7C273A52C8531E62EC6899 /* SocialNetworkKata */,
+				074BE6C61CAC5A58004AEEDE /* SocialNetworkKataTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		074BE6C51CAC5A58004AEEDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		074BE6C31CAC5A58004AEEDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				074BE6D11CAC5B01004AEEDE /* SocialNetworkKata.swift in Sources */,
+				074BE6CA1CAC5A58004AEEDE /* SocialNetworkKataTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE7C2D7D1CC91618E456372D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				074BE6D01CAC5B01004AEEDE /* SocialNetworkKata.swift in Sources */,
+				AE7C2EFDB73F9A8BC4E6281E /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		074BE6CD1CAC5A58004AEEDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SocialNetworkKataTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.carlosdelachica.SocialNetworkKataTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		074BE6CE1CAC5A58004AEEDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SocialNetworkKataTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.carlosdelachica.SocialNetworkKataTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AE7C26816EF3D668BCFB980E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		AE7C2807F6B5E86E0A84364D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AE7C2892E7270CAF04A34B8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AE7C2D5AF1B0B973D0EFCC19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		074BE6CC1CAC5A58004AEEDE /* Build configuration list for PBXNativeTarget "SocialNetworkKataTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				074BE6CD1CAC5A58004AEEDE /* Debug */,
+				074BE6CE1CAC5A58004AEEDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AE7C24ADF93A17626BD8D890 /* Build configuration list for PBXProject "SocialNetworkKata" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE7C2D5AF1B0B973D0EFCC19 /* Debug */,
+				AE7C26816EF3D668BCFB980E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE7C2D0AFC4BA6B19207DC60 /* Build configuration list for PBXNativeTarget "SocialNetworkKata" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE7C2807F6B5E86E0A84364D /* Debug */,
+				AE7C2892E7270CAF04A34B8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AE7C2A37B01D4EA32F55FE33 /* Project object */;
+}
