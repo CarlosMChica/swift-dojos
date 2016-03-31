@@ -6,7 +6,7 @@ class Planet {
   private let planetSize: Int
   private let obstacles: [Point]
 
-  init(planetSize: Int, obstacles: [Point] = []) {
+  init(planetSize: Int = 0, obstacles: [Point] = []) {
     self.planetSize = planetSize
     self.obstacles = obstacles
   }

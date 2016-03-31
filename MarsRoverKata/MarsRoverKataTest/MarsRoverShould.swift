@@ -13,76 +13,82 @@ the rover moves up to the last possible point and reports the obstacle.
 
 class MarsRoverShould: XCTestCase {
 
-  private static let forwardCommand = "F";
-  private static let backwardCommand = "B";
-  private static let leftCommand = "L";
-  private static let rightCommand = "R";
-  private static let unkownCommand = "UNKOWN_COMMAND";
+  private let forwardCommand = "F";
+  private let backwardCommand = "B";
+  private let leftCommand = "L";
+  private let rightCommand = "R";
+  private let unkownCommand = "UNKOWN_COMMAND";
+  private let multipleCommands = "MULTIPLE_COMANDS"
 
   let initialPoint = Point()
-  let direction = DirectionSpy()
-
-  var rover: MarsRover!
-
-  override func setUp() {
-    super.setUp()
-    rover = MarsRover(initialPoint: initialPoint, initialDirection: direction)
-  }
 
   func testStartLookingAtGivenDirection() {
-    let rover = MarsRover(initialPoint: initialPoint, initialDirection: North(planet: Planet(planetSize: 10)))
+    let initialDirection = givenDirection()
+    let rover = givenMarsRoverAt(initialPositionLookingAt(initialDirection))
 
     let direction = rover.lookingAt()
 
-    XCTAssertTrue(direction is North)
+    XCTAssertTrue(initialDirection.dynamicType == direction.dynamicType)
   }
 
   func testStartAtGivenPosition() {
+    let rover = givenMarsRoverAt(givenPositionAtInitialPoint())
+
     let position = rover.position()
 
     XCTAssertEqual(position, initialPoint)
   }
 
-  func testMoveForward_whenExecuteForwardCommand() {
-    rover.execute(MarsRoverShould.forwardCommand)
+  func testExecuteCommands_whenCommandCanExecute() {
+    let action = givenActionSpy()
+    let rover = givenMarsRoverAtInitialPositionWith(action)
 
-    XCTAssertTrue(direction.moveForwardCalled)
+    let commandsInput = "ab"
+    rover.execute(commandsInput)
+
+    XCTAssertTrue(action.executeCalled)
+    XCTAssertEqual(commandsInput.characters.count, action.executeTimes)
   }
 
-  func testMoveBackward_whenExecuteBackwardCommand() {
-    rover.execute(MarsRoverShould.backwardCommand)
-
-    XCTAssertTrue(direction.moveBackwardCalled)
+  func givenPositionAtInitialPoint() -> Position {
+    return Position(point: initialPoint, direction: DirectionSpy())
   }
 
-  func testTurnLeft_whenExecuteTurnLeftCommand() {
-    rover.execute(MarsRoverShould.leftCommand)
-
-    XCTAssertTrue(direction.turnLeftCalled)
+  func givenDirection() -> Direction {
+    return North(planet: Planet())
   }
 
-  func testTurnRight_whenExecuteTurnRightCommand() {
-    rover.execute(MarsRoverShould.rightCommand)
-
-    XCTAssertTrue(direction.turnRightCalled)
+  func initialPositionLookingAt(direction: Direction) -> Position {
+    return Position(point: initialPoint, direction: direction)
   }
 
-  func testDoNothing_whenExecuteUnkownCommand() {
-    rover.execute(MarsRoverShould.unkownCommand)
-
-    XCTAssertFalse(direction.turnRightCalled)
-    XCTAssertFalse(direction.turnLeftCalled)
-    XCTAssertFalse(direction.moveForwardCalled)
-    XCTAssertFalse(direction.moveBackwardCalled)
+  func givenMarsRoverAt(position: Position) -> MarsRover {
+    return MarsRover(initialPosition: position)
   }
 
-  func testDoVariousMoves_whenExecuteMultipleCommands() {
-    rover.execute("FRBL")
+  func givenMarsRoverAtInitialPositionWith(action: Action) -> MarsRover {
+    return MarsRover(initialPosition: givenPositionAtInitialPoint(),
+        actions: [Action](arrayLiteral: action))
+  }
 
-    XCTAssertTrue(direction.moveForwardCalled)
-    XCTAssertTrue(direction.turnRightCalled)
-    XCTAssertTrue(direction.moveBackwardCalled)
-    XCTAssertTrue(direction.turnLeftCalled)
+  func givenActionSpy() -> ExecuteActionSpy {
+    return ExecuteActionSpy()
+  }
+}
+
+class ExecuteActionSpy: Action {
+
+  var executeCalled = false
+  var executeTimes = 0
+
+  func canExecute(command: Command) -> Bool {
+    return true
+  }
+
+  func execute(command: Command) -> Position {
+    executeCalled = true
+    executeTimes += 1
+    return Position(point: Point(), direction: DirectionSpy())
   }
 
 }

@@ -11,15 +11,26 @@
 		073F440D1CA320C50003A77B /* MarsRoverShould.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073F440C1CA320C50003A77B /* MarsRoverShould.swift */; };
 		073F44131CA321390003A77B /* MarsRover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073F44121CA321390003A77B /* MarsRover.swift */; };
 		073F44141CA321390003A77B /* MarsRover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073F44121CA321390003A77B /* MarsRover.swift */; };
-		073F44161CA32A1C0003A77B /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073F44151CA32A1C0003A77B /* Point.swift */; };
-		073F44171CA32A1C0003A77B /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073F44151CA32A1C0003A77B /* Point.swift */; };
 		AE7C203F46B1029F3F0ABE27 /* MoveMarsRoverFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C261F1A681A9DBE157D9E /* MoveMarsRoverFeature.swift */; };
 		AE7C20B0A31914075518EFE4 /* North.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C264FECAB10E725B4AE94 /* North.swift */; };
+		AE7C214A8ACC27A28836B246 /* MoveForwardAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C290799EA2221540109FF /* MoveForwardAction.swift */; };
+		AE7C216FF94F6F66CFAD740D /* ActionsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2DA3C050C962C53B92DB /* ActionsFactory.swift */; };
+		AE7C2204B15954941182E28C /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2500BF2B0A8F3E29FB42 /* Position.swift */; };
 		AE7C222CE8290AA235BAC88F /* SouthShould.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C204BE8202F34103447D0 /* SouthShould.swift */; };
+		AE7C22C7EFCDFF68A76CBB75 /* MoveBackwardAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C244A6F445E0C76B60031 /* MoveBackwardAction.swift */; };
 		AE7C233522D0AE118E953AF0 /* DirectionSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2A6B593BA9861152E368 /* DirectionSpy.swift */; };
 		AE7C23E37595542CC95C2CDD /* PlanetSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C234AD1FA1F2D7F9F032A /* PlanetSpy.swift */; };
+		AE7C241BA45FB66BDBD32B9A /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2FAB9449A3C605A82FB2 /* Action.swift */; };
+		AE7C2437BB030E0190B18A87 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2500BF2B0A8F3E29FB42 /* Position.swift */; };
 		AE7C243CCC1D4847DB56C132 /* DirectionTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C29D1A47F7F32ED75319F /* DirectionTestCase.swift */; };
+		AE7C256AEBEEE3615CC182D7 /* MoveForwardAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C290799EA2221540109FF /* MoveForwardAction.swift */; };
+		AE7C260C99EAD232521B8D9A /* TurnRightAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2E2EAD7727BF9A08C8BA /* TurnRightAction.swift */; };
+		AE7C263363562ED390CC5DB1 /* MoveBackwardAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C244A6F445E0C76B60031 /* MoveBackwardAction.swift */; };
+		AE7C2675CD543BFD1DAA9229 /* TurnLeftActionShould.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2F7D820310B440A8F04F /* TurnLeftActionShould.swift */; };
+		AE7C26B4E649D6D72557414A /* MoveBackwardActionShould.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2B46670ADAC53BEE941A /* MoveBackwardActionShould.swift */; };
 		AE7C26D0EC9437CA4FFCFA48 /* North.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C264FECAB10E725B4AE94 /* North.swift */; };
+		AE7C26D99EC11E3BBFDBB5D4 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2FAB9449A3C605A82FB2 /* Action.swift */; };
+		AE7C26EFD3C089D631BF5398 /* MoveForwardActionShould.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2C9A5AA85C27EFD44A86 /* MoveForwardActionShould.swift */; };
 		AE7C26F8F965A7C6B404DAF0 /* EastShould.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C255BEE745569C3E26587 /* EastShould.swift */; };
 		AE7C279AC0AD7F3632BD8AE5 /* WestShould.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2D1FF8D21E689093AED3 /* WestShould.swift */; };
 		AE7C27C7F8923E9E7BA708D5 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C29D83B5B393BC62B5A3E /* Direction.swift */; };
@@ -31,9 +42,15 @@
 		AE7C2B9318C0EC229C4063B8 /* East.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C26C0991241657680E27F /* East.swift */; };
 		AE7C2C3DF98F3D2D93B272C8 /* West.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2CCEAE5782DBB21C697E /* West.swift */; };
 		AE7C2CD51D541018895E77B1 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C29D83B5B393BC62B5A3E /* Direction.swift */; };
+		AE7C2CEDBE4DECB4872443FA /* TurnLeftAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2595D7BBE2FA0EC00E30 /* TurnLeftAction.swift */; };
+		AE7C2D7685E7DB8150930F46 /* ActionsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2DA3C050C962C53B92DB /* ActionsFactory.swift */; };
 		AE7C2E2FB8AF10D2FCB6F65B /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2F0135DC6396E2726358 /* Planet.swift */; };
+		AE7C2E8D6CFB3F2308648EC0 /* TurnRightAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2E2EAD7727BF9A08C8BA /* TurnRightAction.swift */; };
+		AE7C2EDC1C17E60DA1D5FA24 /* TurnRightActionShould.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C291FE0906A6DAEC7B2A4 /* TurnRightActionShould.swift */; };
 		AE7C2EF4559EACD39CDED41B /* East.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C26C0991241657680E27F /* East.swift */; };
 		AE7C2EF65E96B085B0B012F8 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2F0135DC6396E2726358 /* Planet.swift */; };
+		AE7C2EFD7E369B88F43F5165 /* TurnLeftAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2595D7BBE2FA0EC00E30 /* TurnLeftAction.swift */; };
+		AE7C2F4E1B2DFAF831980509 /* PositionSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C25F4C9D5E1208AA738EE /* PositionSpy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,22 +72,33 @@
 		073F440C1CA320C50003A77B /* MarsRoverShould.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRoverShould.swift; sourceTree = "<group>"; };
 		073F440E1CA320C50003A77B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		073F44121CA321390003A77B /* MarsRover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarsRover.swift; sourceTree = "<group>"; };
-		073F44151CA32A1C0003A77B /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 		AE7C204BE8202F34103447D0 /* SouthShould.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SouthShould.swift; sourceTree = "<group>"; };
 		AE7C234AD1FA1F2D7F9F032A /* PlanetSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetSpy.swift; sourceTree = "<group>"; };
 		AE7C23931A48CC3F772F5309 /* PlanetShould.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetShould.swift; sourceTree = "<group>"; };
+		AE7C244A6F445E0C76B60031 /* MoveBackwardAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveBackwardAction.swift; sourceTree = "<group>"; };
 		AE7C2473C3F0EE885B38EBB2 /* South.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = South.swift; sourceTree = "<group>"; };
+		AE7C2500BF2B0A8F3E29FB42 /* Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		AE7C255BEE745569C3E26587 /* EastShould.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EastShould.swift; sourceTree = "<group>"; };
+		AE7C2595D7BBE2FA0EC00E30 /* TurnLeftAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TurnLeftAction.swift; sourceTree = "<group>"; };
+		AE7C25F4C9D5E1208AA738EE /* PositionSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionSpy.swift; sourceTree = "<group>"; };
 		AE7C261F1A681A9DBE157D9E /* MoveMarsRoverFeature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveMarsRoverFeature.swift; sourceTree = "<group>"; };
 		AE7C264FECAB10E725B4AE94 /* North.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = North.swift; sourceTree = "<group>"; };
 		AE7C26B83E317BDE880237BB /* NorthShould.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NorthShould.swift; sourceTree = "<group>"; };
 		AE7C26C0991241657680E27F /* East.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = East.swift; sourceTree = "<group>"; };
+		AE7C290799EA2221540109FF /* MoveForwardAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveForwardAction.swift; sourceTree = "<group>"; };
+		AE7C291FE0906A6DAEC7B2A4 /* TurnRightActionShould.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TurnRightActionShould.swift; sourceTree = "<group>"; };
 		AE7C29D1A47F7F32ED75319F /* DirectionTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionTestCase.swift; sourceTree = "<group>"; };
 		AE7C29D83B5B393BC62B5A3E /* Direction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		AE7C2A6B593BA9861152E368 /* DirectionSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionSpy.swift; sourceTree = "<group>"; };
+		AE7C2B46670ADAC53BEE941A /* MoveBackwardActionShould.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveBackwardActionShould.swift; sourceTree = "<group>"; };
+		AE7C2C9A5AA85C27EFD44A86 /* MoveForwardActionShould.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveForwardActionShould.swift; sourceTree = "<group>"; };
 		AE7C2CCEAE5782DBB21C697E /* West.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = West.swift; sourceTree = "<group>"; };
 		AE7C2D1FF8D21E689093AED3 /* WestShould.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WestShould.swift; sourceTree = "<group>"; };
+		AE7C2DA3C050C962C53B92DB /* ActionsFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionsFactory.swift; sourceTree = "<group>"; };
+		AE7C2E2EAD7727BF9A08C8BA /* TurnRightAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TurnRightAction.swift; sourceTree = "<group>"; };
 		AE7C2F0135DC6396E2726358 /* Planet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
+		AE7C2F7D820310B440A8F04F /* TurnLeftActionShould.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TurnLeftActionShould.swift; sourceTree = "<group>"; };
+		AE7C2FAB9449A3C605A82FB2 /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,9 +142,12 @@
 			children = (
 				073F43FF1CA3205C0003A77B /* main.swift */,
 				073F44121CA321390003A77B /* MarsRover.swift */,
-				073F44151CA32A1C0003A77B /* Point.swift */,
 				AE7C2F0135DC6396E2726358 /* Planet.swift */,
 				AE7C209BC4633FC9613A815F /* direction */,
+				AE7C259F4C1CF65532FCFE39 /* actions */,
+				AE7C2FAB9449A3C605A82FB2 /* Action.swift */,
+				AE7C2500BF2B0A8F3E29FB42 /* Position.swift */,
+				AE7C2DA3C050C962C53B92DB /* ActionsFactory.swift */,
 			);
 			path = MarsRoverKata;
 			sourceTree = "<group>";
@@ -130,6 +161,7 @@
 				AE7C2A6B593BA9861152E368 /* DirectionSpy.swift */,
 				AE7C261F1A681A9DBE157D9E /* MoveMarsRoverFeature.swift */,
 				AE7C23931A48CC3F772F5309 /* PlanetShould.swift */,
+				AE7C2F2538E1B7080ABB73FD /* actions */,
 			);
 			path = MarsRoverKataTest;
 			sourceTree = "<group>";
@@ -157,6 +189,29 @@
 				AE7C234AD1FA1F2D7F9F032A /* PlanetSpy.swift */,
 			);
 			path = direction;
+			sourceTree = "<group>";
+		};
+		AE7C259F4C1CF65532FCFE39 /* actions */ = {
+			isa = PBXGroup;
+			children = (
+				AE7C290799EA2221540109FF /* MoveForwardAction.swift */,
+				AE7C244A6F445E0C76B60031 /* MoveBackwardAction.swift */,
+				AE7C2595D7BBE2FA0EC00E30 /* TurnLeftAction.swift */,
+				AE7C2E2EAD7727BF9A08C8BA /* TurnRightAction.swift */,
+			);
+			path = actions;
+			sourceTree = "<group>";
+		};
+		AE7C2F2538E1B7080ABB73FD /* actions */ = {
+			isa = PBXGroup;
+			children = (
+				AE7C2C9A5AA85C27EFD44A86 /* MoveForwardActionShould.swift */,
+				AE7C25F4C9D5E1208AA738EE /* PositionSpy.swift */,
+				AE7C2B46670ADAC53BEE941A /* MoveBackwardActionShould.swift */,
+				AE7C2F7D820310B440A8F04F /* TurnLeftActionShould.swift */,
+				AE7C291FE0906A6DAEC7B2A4 /* TurnRightActionShould.swift */,
+			);
+			path = actions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,13 +304,19 @@
 			files = (
 				073F44131CA321390003A77B /* MarsRover.swift in Sources */,
 				073F44001CA3205C0003A77B /* main.swift in Sources */,
-				073F44161CA32A1C0003A77B /* Point.swift in Sources */,
 				AE7C2E2FB8AF10D2FCB6F65B /* Planet.swift in Sources */,
 				AE7C2CD51D541018895E77B1 /* Direction.swift in Sources */,
 				AE7C2EF4559EACD39CDED41B /* East.swift in Sources */,
 				AE7C26D0EC9437CA4FFCFA48 /* North.swift in Sources */,
 				AE7C286000741A4BC8165A70 /* South.swift in Sources */,
 				AE7C2B68198E1B6B1E04F0BD /* West.swift in Sources */,
+				AE7C214A8ACC27A28836B246 /* MoveForwardAction.swift in Sources */,
+				AE7C22C7EFCDFF68A76CBB75 /* MoveBackwardAction.swift in Sources */,
+				AE7C2EFD7E369B88F43F5165 /* TurnLeftAction.swift in Sources */,
+				AE7C260C99EAD232521B8D9A /* TurnRightAction.swift in Sources */,
+				AE7C241BA45FB66BDBD32B9A /* Action.swift in Sources */,
+				AE7C2437BB030E0190B18A87 /* Position.swift in Sources */,
+				AE7C2D7685E7DB8150930F46 /* ActionsFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +326,6 @@
 			files = (
 				073F44141CA321390003A77B /* MarsRover.swift in Sources */,
 				073F440D1CA320C50003A77B /* MarsRoverShould.swift in Sources */,
-				073F44171CA32A1C0003A77B /* Point.swift in Sources */,
 				AE7C2EF65E96B085B0B012F8 /* Planet.swift in Sources */,
 				AE7C243CCC1D4847DB56C132 /* DirectionTestCase.swift in Sources */,
 				AE7C26F8F965A7C6B404DAF0 /* EastShould.swift in Sources */,
@@ -281,6 +341,18 @@
 				AE7C233522D0AE118E953AF0 /* DirectionSpy.swift in Sources */,
 				AE7C203F46B1029F3F0ABE27 /* MoveMarsRoverFeature.swift in Sources */,
 				AE7C27DE13511A406DE96263 /* PlanetShould.swift in Sources */,
+				AE7C256AEBEEE3615CC182D7 /* MoveForwardAction.swift in Sources */,
+				AE7C26EFD3C089D631BF5398 /* MoveForwardActionShould.swift in Sources */,
+				AE7C2F4E1B2DFAF831980509 /* PositionSpy.swift in Sources */,
+				AE7C26B4E649D6D72557414A /* MoveBackwardActionShould.swift in Sources */,
+				AE7C263363562ED390CC5DB1 /* MoveBackwardAction.swift in Sources */,
+				AE7C2CEDBE4DECB4872443FA /* TurnLeftAction.swift in Sources */,
+				AE7C2675CD543BFD1DAA9229 /* TurnLeftActionShould.swift in Sources */,
+				AE7C2E8D6CFB3F2308648EC0 /* TurnRightAction.swift in Sources */,
+				AE7C2EDC1C17E60DA1D5FA24 /* TurnRightActionShould.swift in Sources */,
+				AE7C26D99EC11E3BBFDBB5D4 /* Action.swift in Sources */,
+				AE7C2204B15954941182E28C /* Position.swift in Sources */,
+				AE7C216FF94F6F66CFAD740D /* ActionsFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
