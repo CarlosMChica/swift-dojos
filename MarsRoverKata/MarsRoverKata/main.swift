@@ -9,7 +9,9 @@ class RoverMovePrinter {
       Swift.print("Moving \(input)")
       Swift.print("Rover is at \(rover.position()) and looking at \(rover.lookingAt())")
     } catch (RoverError.UnknownCommand(let command)) {
-      Swift.print("UnkownCommand: \(command)")
+      Swift.print("Unkown command: \(command)")
+    } catch (PlanetError.ObstacleFound(let point)) {
+      Swift.print("Obstacle found at : \(point)")
     } catch {
     }
   }
@@ -42,5 +44,5 @@ printer.print("F")
 printer.print("L")
 printer.print("B")
 printer.print("B")
-printer.print("123")
+printer.print("1")
 
