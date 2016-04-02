@@ -5,24 +5,24 @@ class PlanetSpy: Planet {
   var moveEastCalled = false
   var moveWestCalled = false
 
-  override func moveSouth(point: Point) -> Point {
+  override func moveSouth(point: Point) throws -> Point {
     moveSouthCalled = true
-    return super.moveSouth(point)
+    return try super.moveSouth(point)
   }
 
-  override func moveNorth(point: Point) -> Point {
+  override func moveNorth(point: Point) throws -> Point {
     moveNorthCalled = true
-    return super.moveNorth(point)
+    return try super.moveNorth(point)
   }
 
-  override func moveEast(point: Point) -> Point {
+  override func moveEast(point: Point) throws -> Point {
     moveEastCalled = true
-    return super.moveEast(point)
+    return try super.moveEast(point)
   }
 
-  override func moveWest(point: Point) -> Point {
+  override func moveWest(point: Point) throws -> Point {
     moveWestCalled = true
-    return super.moveWest(point)
+    return try super.moveWest(point)
   }
 
 }

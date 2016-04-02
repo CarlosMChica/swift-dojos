@@ -11,29 +11,29 @@ class Planet {
     self.obstacles = obstacles
   }
 
-  func moveSouth(point: Point) -> Point {
-    return move(point,
+  func moveSouth(point: Point) throws -> Point {
+    return try move(point,
         isAt: southBorder,
         wrapTo: pointAtNorthBorder,
         moveTo: pointAtSouthOf)
   }
 
-  func moveNorth(point: Point) -> Point {
-    return move(point,
+  func moveNorth(point: Point) throws -> Point {
+    return try move(point,
         isAt: northBorder,
         wrapTo: pointAtSouthBorder,
         moveTo: pointAtNorthOf)
   }
 
-  func moveEast(point: Point) -> Point {
-    return move(point,
+  func moveEast(point: Point) throws -> Point {
+    return try move(point,
         isAt: eastBorder,
         wrapTo: pointAtWestBorder,
         moveTo: pointAtEastOf)
   }
 
-  func moveWest(point: Point) -> Point {
-    return move(point,
+  func moveWest(point: Point) throws -> Point {
+    return try move(point,
         isAt: westBorder,
         wrapTo: pointAtEastBorder,
         moveTo: pointAtWestOf)
@@ -42,7 +42,7 @@ class Planet {
   private func move(point: Point,
                     isAt isAtBorder: PointChecker,
                     wrapTo: PointMover,
-                    moveTo: PointMover) -> Point {
+                    moveTo: PointMover) throws -> Point {
 
     var nextPoint: Point
     if (isAtBorder(point: point)) {
@@ -51,10 +51,14 @@ class Planet {
       nextPoint = moveTo(point: point)
     }
 
-    if (isThereAnObstacleAt(nextPoint)) {
-      return point
+    return try checkObstacleAt(nextPoint)
+  }
+
+  private func checkObstacleAt(point: Point) throws -> Point {
+    if (isThereAnObstacleAt(point)) {
+      throw PlanetError.ObstacleFound(point: point)
     } else {
-      return nextPoint
+      return point
     }
   }
 
@@ -113,5 +117,16 @@ class Planet {
 
   private func pointAtNorthOf(point: Point) -> Point {
     return Point(x: point.x, y: point.y + 1)
+  }
+}
+
+enum PlanetError: ErrorType, Equatable {
+  case ObstacleFound(point:Point)
+}
+
+func ==(lhs: PlanetError, rhs: PlanetError) -> Bool {
+  switch (lhs, rhs) {
+  case (.ObstacleFound(let l), .ObstacleFound(let r)):
+    return l == r
   }
 }

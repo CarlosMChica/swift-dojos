@@ -13,68 +13,67 @@ class PlanetShould: XCTestCase {
     planet = Planet(planetSize: PlanetShould.planetSize)
   }
 
-  func testReturnPointAtEast_whenMoveEast() {
-    let pointAtEast = planet.moveEast(aPoint)
+  func testReturnPointAtEast_whenMoveEast() throws {
+    let pointAtEast = try planet.moveEast(aPoint)
 
     XCTAssertEqual(pointAtEast, Point(x: aPoint.x + 1, y: aPoint.y))
   }
 
-  func testReturnPointAtWest_whenMoveWest() {
-    let pointAtWest = planet.moveWest(aPoint)
+  func testReturnPointAtWest_whenMoveWest() throws {
+    let pointAtWest = try planet.moveWest(aPoint)
 
     XCTAssertEqual(pointAtWest, Point(x: aPoint.x - 1, y: aPoint.y))
   }
 
-  func testReturnPointAtNorth_whenMoveNorth() {
-    let pointAtNorth = planet.moveNorth(aPoint)
+  func testReturnPointAtNorth_whenMoveNorth() throws {
+    let pointAtNorth = try planet.moveNorth(aPoint)
 
     XCTAssertEqual(pointAtNorth, Point(x: aPoint.x, y: aPoint.y + 1))
   }
 
-  func testReturnPointAtSouth_whenMoveSouth() {
-    let pointAtSouth = planet.moveSouth(aPoint)
+  func testReturnPointAtSouth_whenMoveSouth() throws {
+    let pointAtSouth = try planet.moveSouth(aPoint)
 
     XCTAssertEqual(pointAtSouth, Point(x: aPoint.x, y: aPoint.y - 1))
   }
 
-  func testWrapToWestBorder_whenMovingEastFromEastBorder() {
+  func testWrapToWestBorder_whenMovingEastFromEastBorder() throws {
     let aPointAtEastBorder = Point(x: PlanetShould.planetSize, y: 0)
 
-    let nextPoint = planet.moveEast(aPointAtEastBorder)
+    let nextPoint = try planet.moveEast(aPointAtEastBorder)
 
     XCTAssertEqual(nextPoint, Point(x: 0, y: 0))
   }
 
-  func testWrapToEastBorder_whenMovingWestFromWestBorder() {
+  func testWrapToEastBorder_whenMovingWestFromWestBorder() throws {
     let aPointAtWestBorder = Point(x: 0, y: 0)
 
-    let nextPoint = planet.moveWest(aPointAtWestBorder)
+    let nextPoint = try planet.moveWest(aPointAtWestBorder)
 
     XCTAssertEqual(nextPoint, Point(x: PlanetShould.planetSize, y: 0))
   }
 
-  func testWrapToSouthBorder_whenMovingNorthFromNorthBorder() {
+  func testWrapToSouthBorder_whenMovingNorthFromNorthBorder() throws {
     let aPointAtWestBorder = Point(x: 0, y: PlanetShould.planetSize)
 
-    let nextPoint = planet.moveNorth(aPointAtWestBorder)
+    let nextPoint = try planet.moveNorth(aPointAtWestBorder)
 
     XCTAssertEqual(nextPoint, Point(x: 0, y: 0))
   }
 
-  func testWrapToNorthBorder_whenMovingSouthFromSouthBorder() {
+  func testWrapToNorthBorder_whenMovingSouthFromSouthBorder() throws {
     let aPointAtSouthBorder = Point(x: 0, y: 0)
 
-    let nextPoint = planet.moveSouth(aPointAtSouthBorder)
+    let nextPoint = try planet.moveSouth(aPointAtSouthBorder)
 
     XCTAssertEqual(nextPoint, Point(x: 0, y: PlanetShould.planetSize))
   }
 
-  func testStayAtPosition_whenMovingToPointWithObstacle() {
+  func testThrowObstacleFound_whenMovingToPointWithObstacle() throws {
     let point = Point()
-    let planet = Planet(planetSize: PlanetShould.planetSize, obstacles: [Point(x: 1, y: 0)])
+    let obstaclePoint = Point(x: 1, y: 0)
+    let planet = Planet(planetSize: PlanetShould.planetSize, obstacles: [obstaclePoint])
 
-    let nextPoint = planet.moveEast(point)
-
-    XCTAssertEqual(nextPoint, point)
+    XCTAssertThrow(PlanetError.ObstacleFound(point: obstaclePoint), try planet.moveEast(point))
   }
 }
