@@ -1,10 +1,5 @@
 class MarsRover {
 
-//  private static let FORWARD_COMMAND: Character = "F";
-//  private static let BACKWARD_COMMAND: Character = "B";
-//  private static let LEFT_COMMAND: Character = "L";
-//  private static let RIGHT_COMMAND: Character = "R";
-
   private let actions: [Action]
 
   private var currentPosition: Position
