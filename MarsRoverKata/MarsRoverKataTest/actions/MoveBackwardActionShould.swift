@@ -6,10 +6,10 @@ class MoveBackwardActionShould: XCTestCase {
   let position = PositionSpy()
   let invalidCommand = "invalidCommand"
 
-  func testMoveBackward_whenExecute() {
+  func testMoveBackward_whenExecute() throws {
     let command = givenAnyCommand()
 
-    action.execute(command)
+    try action.execute(command)
 
     XCTAssertTrue(position.moveBackwardCalled)
   }

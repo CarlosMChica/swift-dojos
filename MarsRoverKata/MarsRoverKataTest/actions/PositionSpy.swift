@@ -9,24 +9,24 @@ class PositionSpy: Position {
     super.init(point: Point(), direction: DirectionSpy())
   }
 
-  override func moveForward() -> Position {
+  override func moveForward() throws -> Position {
     moveForwardCalled = true
-    return super.moveForward()
+    return try super.moveForward()
   }
 
-  override func moveBackward() -> Position {
+  override func moveBackward() throws -> Position {
     moveBackwardCalled = true
-    return super.moveBackward()
+    return try super.moveBackward()
   }
 
-  override func turnLeft() -> Position {
+  override func turnLeft() throws -> Position {
     turnLeftCalled = true
-    return super.turnLeft()
+    return try super.turnLeft()
   }
 
-  override func turnRight() -> Position {
+  override func turnRight() throws -> Position {
     turnRightCalled = true
-    return super.turnRight()
+    return try super.turnRight()
   }
 
 }

@@ -6,10 +6,10 @@ class MoveForwardActionShould: XCTestCase {
   let position = PositionSpy()
   let invalidCommand = "invalidCommand"
 
-  func testMoveForward_whenExecute() {
+  func testMoveForward_whenExecute() throws {
     let command = givenAnyCommand()
 
-    action.execute(command)
+    try action.execute(command)
 
     XCTAssertTrue(position.moveForwardCalled)
   }

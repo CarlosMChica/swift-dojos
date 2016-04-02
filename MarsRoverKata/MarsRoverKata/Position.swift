@@ -8,20 +8,20 @@ class Position: Equatable {
     self.direction = direction
   }
 
-  func moveForward() -> Position {
-    return Position(point: direction.moveForward(point), direction: direction)
+  func moveForward() throws -> Position {
+    return try Position(point: direction.moveForward(point), direction: direction)
   }
 
-  func moveBackward() -> Position {
-    return Position(point: direction.moveBackward(point), direction: direction)
+  func moveBackward() throws -> Position {
+    return try Position(point: direction.moveBackward(point), direction: direction)
   }
 
-  func turnLeft() -> Position {
-    return Position(point: point, direction: direction.turnLeft())
+  func turnLeft() throws -> Position {
+    return try Position(point: point, direction: direction.turnLeft())
   }
 
-  func turnRight() -> Position {
-    return Position(point: point, direction: direction.turnRight())
+  func turnRight() throws -> Position {
+    return try Position(point: point, direction: direction.turnRight())
   }
 
 }

@@ -6,8 +6,8 @@ class MoveBackwardAction: Action {
     return command.input == MoveBackwardAction.commandInput
   }
 
-  func execute(command: Command) -> Position {
-    return command.position.moveBackward()
+  func execute(command: Command) throws -> Position {
+    return try command.position.moveBackward()
   }
 
 }

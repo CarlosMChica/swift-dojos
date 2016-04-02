@@ -1,7 +1,7 @@
 protocol Action {
   func canExecute(command: Command) -> Bool
 
-  func execute(command: Command) -> Position
+  func execute(command: Command) throws -> Position
 }
 
 struct Command: Equatable {

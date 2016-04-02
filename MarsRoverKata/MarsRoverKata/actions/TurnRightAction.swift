@@ -6,8 +6,8 @@ class TurnRightAction: Action {
     return command.input == TurnRightAction.commandInput
   }
 
-  func execute(command: Command) -> Position {
-    return command.position.turnRight()
+  func execute(command: Command) throws -> Position {
+    return try command.position.turnRight()
   }
 
 }

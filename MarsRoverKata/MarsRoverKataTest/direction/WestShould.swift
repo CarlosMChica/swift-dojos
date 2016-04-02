@@ -2,26 +2,26 @@ import XCTest
 
 class WestShould: DirectionTestCase {
 
-  func testMoveWest_whenMoveForward() {
-    direction.moveForward(point)
+  func testMoveWest_whenMoveForward() throws {
+    try direction.moveForward(point)
 
     assertMoveWestCalled()
   }
 
-  func testMoveEast_whenMoveBackward() {
-    direction.moveBackward(point)
+  func testMoveEast_whenMoveBackward() throws {
+    try direction.moveBackward(point)
 
     assertMoveEastCalled()
   }
 
-  func testLookAtSouth_whenTurnLeft() {
-    let newDirection = direction.turnLeft()
+  func testLookAtSouth_whenTurnLeft() throws {
+    let newDirection = try direction.turnLeft()
 
     assertLookingAtSouth(newDirection)
   }
 
-  func testLookAtNorth_whenTurnRight() {
-    let newDirection = direction.turnRight()
+  func testLookAtNorth_whenTurnRight() throws {
+    let newDirection = try direction.turnRight()
 
     assertLookingAtNorth(newDirection)
   }

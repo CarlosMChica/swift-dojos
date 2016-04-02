@@ -1,11 +1,11 @@
 protocol Direction: CustomStringConvertible {
 
-  func moveForward(point: Point) -> Point
+  func moveForward(point: Point) throws -> Point
 
-  func moveBackward(point: Point) -> Point
+  func moveBackward(point: Point) throws  -> Point
 
-  func turnLeft() -> Direction
+  func turnLeft() throws  -> Direction
 
-  func turnRight() -> Direction
+  func turnRight() throws  -> Direction
 
 }

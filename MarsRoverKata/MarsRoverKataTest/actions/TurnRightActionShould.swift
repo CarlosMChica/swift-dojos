@@ -6,10 +6,10 @@ class TurnRightActionShould: XCTestCase {
   let position = PositionSpy()
   let invalidCommand = "invalidCommand"
 
-  func testTurnRight_whenExecute() {
+  func testTurnRight_whenExecute() throws {
     let command = givenAnyCommand()
 
-    action.execute(command)
+    try action.execute(command)
 
     XCTAssertTrue(position.turnRightCalled)
   }

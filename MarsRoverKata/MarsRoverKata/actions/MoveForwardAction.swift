@@ -6,8 +6,8 @@ class MoveForwardAction: Action {
     return command.input == MoveForwardAction.commandInput
   }
 
-  func execute(command: Command) -> Position {
-    return command.position.moveForward()
+  func execute(command: Command) throws -> Position {
+    return try command.position.moveForward()
   }
 
 }

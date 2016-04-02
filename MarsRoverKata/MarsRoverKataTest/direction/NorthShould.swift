@@ -2,26 +2,26 @@ import XCTest
 
 class NorthShould: DirectionTestCase {
 
-  func testMoveNorth_whenMoveForward() {
-    direction.moveForward(point)
+  func testMoveNorth_whenMoveForward() throws {
+    try direction.moveForward(point)
 
     assertMoveNorthCalled()
   }
 
-  func testMoveSouth_whenMoveBackward() {
-    direction.moveBackward(point)
+  func testMoveSouth_whenMoveBackward() throws {
+    try direction.moveBackward(point)
 
     assertMoveSouthCalled()
   }
 
-  func testLookAtSouth_whenTurnLeft() {
-    let newDirection = direction.turnLeft()
+  func testLookAtSouth_whenTurnLeft() throws {
+    let newDirection = try direction.turnLeft()
 
     assertLookingAtWest(newDirection)
   }
 
-  func testLookAtNorth_whenTurnRight() {
-    let newDirection = direction.turnRight()
+  func testLookAtNorth_whenTurnRight() throws {
+    let newDirection = try direction.turnRight()
 
     assertLookingAtEast(newDirection)
   }

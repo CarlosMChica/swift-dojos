@@ -6,8 +6,8 @@ class TurnLeftAction: Action {
     return command.input == TurnLeftAction.commandInput
   }
 
-  func execute(command: Command) -> Position {
-    return command.position.turnLeft()
+  func execute(command: Command) throws -> Position {
+    return try command.position.turnLeft()
   }
 
 }

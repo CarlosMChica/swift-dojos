@@ -6,12 +6,12 @@ class East: Direction, Equatable {
     self.planet = planet
   }
 
-  func moveForward(point: Point) -> Point {
-    return planet.moveEast(point)
+  func moveForward(point: Point) throws -> Point {
+    return try planet.moveEast(point)
   }
 
-  func moveBackward(point: Point) -> Point {
-    return planet.moveWest(point)
+  func moveBackward(point: Point) throws -> Point {
+    return try planet.moveWest(point)
   }
 
   func turnLeft() -> Direction {
