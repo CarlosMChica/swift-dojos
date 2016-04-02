@@ -15,12 +15,13 @@ class MoveMarsRoverFeature: XCTestCase {
     XCTAssertEqual(finalPoint, rover.position())
   }
 
-  func testRoverShouldStayAtPositionIfEncountersObstacle() {
-    let planet = givenPlanetWithObstacles()
+  func testRoverShouldReportObstacleAndGoBackToPreviousWhenObstacleFound() throws {
+    let obstaclePoint = Point(x: 0, y: 2)
+    let planet = givenPlanetWithObstacle(obstaclePoint)
     let position = givenInitialPositionAt(planet)
     let rover = givenMarsRoverAtInitialPosition(position)
 
-    try! rover.execute("FF")
+    XCTAssertThrow(PlanetError.ObstacleFound(point: obstaclePoint), try rover.execute("FF"))
 
     let finalPoint = Point(x: 0, y: 1)
     XCTAssertEqual(finalPoint, rover.position())
@@ -30,8 +31,8 @@ class MoveMarsRoverFeature: XCTestCase {
     return Planet(planetSize: MoveMarsRoverFeature.planetSize)
   }
 
-  func givenPlanetWithObstacles() -> Planet {
-    return Planet(planetSize: MoveMarsRoverFeature.planetSize, obstacles: [Point(x: 0, y: 2)])
+  func givenPlanetWithObstacle(obstacle : Point) -> Planet {
+    return Planet(planetSize: MoveMarsRoverFeature.planetSize, obstacles: [obstacle])
   }
 
   func givenInitialPositionAt(planet: Planet) -> Position {
