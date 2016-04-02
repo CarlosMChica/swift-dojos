@@ -4,9 +4,14 @@ class RoverMovePrinter {
       actions: ActionsFactory.make())
 
   func print(input: String) {
-    rover.execute(input)
-    Swift.print("Moving \(input)")
-    Swift.print("Rover is at \(rover.position()) and looking at \(rover.lookingAt())")
+    do {
+      try rover.execute(input)
+      Swift.print("Moving \(input)")
+      Swift.print("Rover is at \(rover.position()) and looking at \(rover.lookingAt())")
+    } catch (RoverError.UnknownCommand(let command)) {
+      Swift.print("UnkownCommand: \(command)")
+    } catch {
+    }
   }
 
   static func buildInitialPosition() -> Position {
@@ -37,3 +42,5 @@ printer.print("F")
 printer.print("L")
 printer.print("B")
 printer.print("B")
+printer.print("123")
+

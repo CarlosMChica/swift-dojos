@@ -9,7 +9,7 @@ class MoveMarsRoverFeature: XCTestCase {
     let position = givenInitialPositionAt(planet)
     let rover = givenMarsRoverAtInitialPosition(position)
 
-    rover.execute("FFRFFLBBB")
+    try! rover.execute("FFRFFLBBB")
 
     let finalPoint = Point(x: 2, y: 10)
     XCTAssertEqual(finalPoint, rover.position())
@@ -20,7 +20,7 @@ class MoveMarsRoverFeature: XCTestCase {
     let position = givenInitialPositionAt(planet)
     let rover = givenMarsRoverAtInitialPosition(position)
 
-    rover.execute("FF")
+    try! rover.execute("FF")
 
     let finalPoint = Point(x: 0, y: 1)
     XCTAssertEqual(finalPoint, rover.position())
