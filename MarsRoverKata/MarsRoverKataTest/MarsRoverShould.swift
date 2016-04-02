@@ -39,24 +39,23 @@ class MarsRoverShould: XCTestCase {
     XCTAssertEqual(position, initialPoint)
   }
 
-  func testExecuteCommands_whenCommandCanExecute() {
+  func testExecuteCommands_whenCommandCanExecute() throws {
     let action = givenActionSpy()
     let rover = givenMarsRoverAtInitialPositionWith(action)
 
     let commandsInput = "ab"
-    try! rover.execute(commandsInput)
+    try rover.execute(commandsInput)
 
     XCTAssertTrue(action.executeCalled)
     XCTAssertEqual(commandsInput.characters.count, action.executeTimes)
   }
 
-  func testThrowUnkownCommandError_whenCanNotExecuteCommand() {
+  func testThrowUnkownCommandError_whenCanNotExecuteCommand() throws {
     let action = givenCanNotExecuteAction()
     let rover = givenMarsRoverAtInitialPositionWith(action)
 
-    let unkownCommand = "unkown_comand"
-    AssertThrow(RoverError.UnknownCommand(command: unkownCommand),
-        try! rover.execute(unkownCommand))
+    let unkownCommand = "u"
+    XCTAssertThrow(RoverError.UnknownCommand(command: unkownCommand), try rover.execute(unkownCommand))
   }
 
   func givenCanNotExecuteAction() -> Action {
@@ -68,15 +67,15 @@ class MarsRoverShould: XCTestCase {
   }
 
   func givenDirection() -> Direction {
-    return North(planet: Planet())
+    return DirectionSpy()
   }
 
   func initialPositionLookingAt(direction: Direction) -> Position {
     return Position(point: initialPoint, direction: direction)
   }
 
-  func givenMarsRoverAt(position: Position) -> MarsRover {
-    return MarsRover(initialPosition: position)
+  func givenMarsRoverAt(position: Position, actions: [Action] = [Action]()) -> MarsRover {
+    return MarsRover(initialPosition: position, actions: actions)
   }
 
   func givenMarsRoverAtInitialPositionWith(action: Action) -> MarsRover {
@@ -88,19 +87,6 @@ class MarsRoverShould: XCTestCase {
     return ExecuteActionSpy()
   }
 
-  func AssertThrow<R, E where E: ErrorType, E: Equatable>(expectedError: E, @autoclosure _ closure: () throws -> R) -> () {
-    do {
-      try closure()
-      XCTFail("Expected error \"\(expectedError)\", " + "but closure succeeded.")
-    } catch let error as E {
-      XCTAssertEqual(error, expectedError,
-          "Catched error is from expected type, but not the expected case.")
-    } catch {
-      XCTFail("Catched error \"\(error)\", "
-          + "but not the expected error "
-          + "\"\(expectedError)\".")
-    }
-  }
 }
 
 class CanNotExecuteActionStub: Action {
@@ -130,6 +116,23 @@ class ExecuteActionSpy: Action {
     return Position(point: Point(), direction: DirectionSpy())
   }
 
+}
+
+extension XCTest {
+
+  func XCTAssertThrow<R, E where E: ErrorType, E: Equatable>(expectedError: E, @autoclosure _ closure: () throws -> R) -> () {
+    do {
+      try closure()
+      XCTFail("Expected error \"\(expectedError)\", " + "but closure succeeded.")
+    } catch let error as E {
+      XCTAssertEqual(error, expectedError,
+          "Catched error is from expected type, but not the expected case.")
+    } catch {
+      XCTFail("Catched error \"\(error)\", "
+          + "but not the expected error "
+          + "\"\(expectedError)\".")
+    }
+  }
 }
 
 
