@@ -20,31 +20,28 @@ class MarsRover {
   func execute(input: String) throws {
     for inputCommand in input.characters {
       let command = Command(input: String(inputCommand), position: currentPosition)
-      try! executeCommand(command)
+      try executeCommand(command)
     }
   }
 
   private func executeCommand(command: Command) throws {
-    var executed = false
     for action in actions {
       if (action.canExecute(command)) {
-        currentPosition = action.execute(command)
-        executed = true
+        currentPosition = try action.execute(command)
+        return
       }
     }
-    if (!executed) {
-      throw RoverError.UnknownCommand(command: command.input)
-    }
+    throw RoverError.UnknownCommand(command: command.input)
   }
 
 }
 
 enum RoverError: ErrorType {
   case UnknownCommand(command:String)
-  case ObstacleFound(point:Point)
 }
 
-extension RoverError : Equatable {}
+extension RoverError: Equatable {
+}
 
 /// Implement the `==` operator as required by protocol `Equatable`.
 func ==(lhs: RoverError, rhs: RoverError) -> Bool {
@@ -57,6 +54,6 @@ func ==(lhs: RoverError, rhs: RoverError) -> Bool {
     // as soon as we add additional error cases, we have to revisit only the
     // Equatable implementation, if the case has an associated value.
     return lhs._domain == rhs._domain
-        && lhs._code   == rhs._code
+        && lhs._code == rhs._code
   }
 }
