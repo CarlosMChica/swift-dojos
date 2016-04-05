@@ -23,18 +23,41 @@ class PostingFeature: XCTestCase {
   * Then the user timeline should contain post
   */
   func testShouldPublishMessageToUserTimeline() {
-    let user = User(name: "Bob")
-    let postRepository = PostRepository()
-    let commands = [Action](arrayLiteral: PostAction(postRepository: postRepository))
-    let socialNetwork = SocialNetwork(actions: commands)
-    let message = "Damn! We lost!"
-    let input = "\(user.name) -> \(message)"
-    let action = Input(input: input)
+    let user = givenBobUser()
+    let postRepository = givenPostsRepository()
+    let socialNetwork = givenSocialNetworkWithPostAction(givenPostActionWith(postRepository))
+    let message = givenMessage()
+    let input = givenPostActionInput(user, message: message)
 
-    socialNetwork.execute(action)
+    socialNetwork.execute(input)
 
-    let expectedTimeline = [Post](arrayLiteral: Post(user: user, message: message))
+    let expectPost = Post(user: user, message: message)
+    let expectedTimeline = [Post](arrayLiteral: expectPost)
     XCTAssertEqual(expectedTimeline, postRepository.timelineOf(user))
   }
 
+  private func givenPostActionInput(user: User, message: String) -> Input {
+    return Input(input: "\(user.name) -> \(message)")
+  }
+
+  private func givenMessage() -> String {
+    return "Damn! We lost!"
+  }
+
+  private func givenSocialNetworkWithPostAction(postAction: PostAction) -> SocialNetwork {
+    let actions = [Action](arrayLiteral: postAction)
+    return SocialNetwork(actions: actions)
+  }
+
+  private func givenPostActionWith(postRepository: PostRepository) -> PostAction {
+    return PostAction(postRepository: postRepository)
+  }
+
+  private func givenPostsRepository() -> PostRepository {
+    return PostRepository()
+  }
+
+  private func givenBobUser() -> User {
+    return User(name: "Bob")
+  }
 }
