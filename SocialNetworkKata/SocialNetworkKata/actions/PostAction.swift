@@ -11,9 +11,9 @@ class PostAction: Action {
     return identifier == action.getParamAtPosition(1)
   }
 
-  func execute(action: Input) {
-    let user = User(name: action.getParamAtPosition(0))
-    let message = action.getParamAtPosition(2)
+  func execute(input: Input) {
+    let user = User(name: input.getParamAtPosition(0))
+    let message = input.getParamAtPosition(2)
     postRepository.store(Post(user: user, message: message))
   }
 
