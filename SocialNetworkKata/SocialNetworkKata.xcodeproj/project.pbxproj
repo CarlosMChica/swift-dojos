@@ -18,6 +18,7 @@
 		AE7C267588D0EC03D4BD0029 /* PostActionShould.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2B2A4F29F0A13AA12AE5 /* PostActionShould.swift */; };
 		AE7C26F76594FB4E32ABC1E4 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2D4E9B1AD43C0D955A1E /* Input.swift */; };
 		AE7C270C15C58CEDCF68FF4F /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2BB8D00911D51622967D /* Action.swift */; };
+		AE7C2757750291B7468C0BFA /* PostRepositoryShould.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2955D34BC38ABF43DB38 /* PostRepositoryShould.swift */; };
 		AE7C28E91F3EBF92B866A9C4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C252F85B574991C7DEB97 /* User.swift */; };
 		AE7C2BCCE36CB8CA9F3AA3E9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C252F85B574991C7DEB97 /* User.swift */; };
 		AE7C2BD561516AF6A784B919 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2BB8D00911D51622967D /* Action.swift */; };
@@ -49,6 +50,7 @@
 		AE7C22B087149547BBC09D98 /* ActionSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSpy.swift; sourceTree = "<group>"; };
 		AE7C23F9C20906A726A8E0A6 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		AE7C252F85B574991C7DEB97 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AE7C2955D34BC38ABF43DB38 /* PostRepositoryShould.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostRepositoryShould.swift; sourceTree = "<group>"; };
 		AE7C2B2A4F29F0A13AA12AE5 /* PostActionShould.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostActionShould.swift; sourceTree = "<group>"; };
 		AE7C2B3D4BBF77B895647B0E /* PostRepositorySpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostRepositorySpy.swift; sourceTree = "<group>"; };
 		AE7C2B4D313FE1FD97A9CCBF /* PostAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostAction.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				AE7C2F5936528181B6BD58E4 /* SocialNetworkShould.swift */,
 				AE7C2B2A4F29F0A13AA12AE5 /* PostActionShould.swift */,
 				AE7C205DF74308F2A99CDDC0 /* doubles */,
+				AE7C2955D34BC38ABF43DB38 /* PostRepositoryShould.swift */,
 			);
 			path = SocialNetworkKataTest;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				AE7C2D84E0721DA2455D10BF /* PostRepository.swift in Sources */,
 				AE7C23541682E509E328129F /* ActionSpy.swift in Sources */,
 				AE7C2537BAD6C75AFEF83E4F /* PostRepositorySpy.swift in Sources */,
+				AE7C2757750291B7468C0BFA /* PostRepositoryShould.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

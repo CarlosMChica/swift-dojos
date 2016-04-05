@@ -1,7 +1,7 @@
 struct Post: Equatable {
 
-  private let user: User
-  private let message: String
+  let user: User
+  let message: String
 
   init(user: User, message: String) {
     self.user = user
