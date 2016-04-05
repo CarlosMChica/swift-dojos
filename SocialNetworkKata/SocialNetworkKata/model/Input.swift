@@ -1,4 +1,4 @@
-class Input: Equatable {
+struct Input: Equatable {
 
   private let input: String
 
