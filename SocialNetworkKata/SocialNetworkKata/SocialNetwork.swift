@@ -1,15 +1,15 @@
 class SocialNetwork {
 
-  private let commands: [Action]
+  private let actions: [Action]
 
-  init(commands: [Action]) {
-    self.commands = commands
+  init(actions: [Action]) {
+    self.actions = actions
   }
 
-  func execute(action: Input) {
-    for command in commands {
-      if (command.canExecute(action)) {
-        command.execute(action)
+  func execute(input: Input) {
+    for action in actions {
+      if (action.canExecute(input)) {
+        action.execute(input)
       }
     }
   }

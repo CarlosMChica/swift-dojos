@@ -26,7 +26,7 @@ class PostingFeature: XCTestCase {
     let user = User(name: "Bob")
     let postRepository = PostRepository()
     let commands = [Action](arrayLiteral: PostAction(postRepository: postRepository))
-    let socialNetwork = SocialNetwork(commands: commands)
+    let socialNetwork = SocialNetwork(actions: commands)
     let message = "Damn! We lost!"
     let input = "\(user.name) -> \(message)"
     let action = Input(input: input)
