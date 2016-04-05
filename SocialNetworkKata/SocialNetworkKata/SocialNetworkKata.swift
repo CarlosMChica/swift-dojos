@@ -1,5 +1,0 @@
-class SocialNetworkKata {
-    func a(){
-        
-    }
-}
