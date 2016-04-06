@@ -1,16 +1,35 @@
+import Foundation
+
 struct Input: Equatable {
 
+  private let argumentsSeparator: Character = " "
   private let input: String
 
   init(input: String) {
     self.input = input
   }
 
-  func getParamAtPosition(position: Int) -> String {
-    return input.characters.split(" ").map(String.init)[position]
+  func hasIdentifier(identifier: String) -> Bool {
+    return input.containsString(identifier)
   }
+
+  func getFirstArgument() -> String {
+    return input.characters.split(argumentsSeparator).map(String.init)[0]
+  }
+
+  func getIdentifierArgument(identifier: String) -> String? {
+    let arguments = input.componentsSeparatedByString(identifier)
+    return arguments.count > 1 ? arguments[1].trim() : nil
+  }
+
 }
 
 func ==(lhs: Input, rhs: Input) -> Bool {
   return lhs.input == rhs.input
+}
+
+extension String {
+  func trim() -> String {
+    return self.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+  }
 }
