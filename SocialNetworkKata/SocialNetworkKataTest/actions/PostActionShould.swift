@@ -5,7 +5,7 @@ class PostActionShould: XCTestCase {
   private let arrow = "->"
   private let userName = "userName"
   private let message = "message"
-  private let invalidInput = "-> awdwad ->"
+  private let invalidInput = "awdwad"
 
   private var validInput: String!
 
