@@ -7,13 +7,13 @@ class PostAction: Action {
     self.postRepository = postRepository
   }
 
-  func canExecute(action: Input) -> Bool {
-    return identifier == action.getParamAtPosition(1)
+  func canExecute(input: Input) -> Bool {
+    return input.hasIdentifier(identifier)
   }
 
   func execute(input: Input) {
-    let user = User(name: input.getParamAtPosition(0))
-    let message = input.getParamAtPosition(2)
+    let user = User(name: input.getFirstArgument())
+    let message = input.getIdentifierArgument(identifier)!
     postRepository.store(Post(user: user, message: message))
   }
 
