@@ -10,14 +10,17 @@
 		074BE6CA1CAC5A58004AEEDE /* PostingFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074BE6C91CAC5A58004AEEDE /* PostingFeature.swift */; };
 		074BE6D01CAC5B01004AEEDE /* SocialNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074BE6CF1CAC5B01004AEEDE /* SocialNetwork.swift */; };
 		074BE6D11CAC5B01004AEEDE /* SocialNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074BE6CF1CAC5B01004AEEDE /* SocialNetwork.swift */; };
+		AE7C20A5B1985CD2C3F1BFE6 /* TestableClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C29FECE98DC2AE83876FE /* TestableClock.swift */; };
 		AE7C210C87DCBF56F92D5BE0 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C23F9C20906A726A8E0A6 /* Post.swift */; };
 		AE7C21273B61F887F7CE64A5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C23F9C20906A726A8E0A6 /* Post.swift */; };
 		AE7C21D2452E053BAABE1980 /* PostActionShould.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2BF458F21A783919E321 /* PostActionShould.swift */; };
 		AE7C23541682E509E328129F /* ActionSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C22B087149547BBC09D98 /* ActionSpy.swift */; };
 		AE7C2537BAD6C75AFEF83E4F /* PostRepositorySpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2B3D4BBF77B895647B0E /* PostRepositorySpy.swift */; };
 		AE7C262B324C4717E1713967 /* SocialNetworkShould.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2F5936528181B6BD58E4 /* SocialNetworkShould.swift */; };
+		AE7C26F45EFA25A8B81DB8A8 /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C242F8DBE28919CD9D5D5 /* Clock.swift */; };
 		AE7C26F76594FB4E32ABC1E4 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2D4E9B1AD43C0D955A1E /* Input.swift */; };
 		AE7C270C15C58CEDCF68FF4F /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2BB8D00911D51622967D /* Action.swift */; };
+		AE7C271FC239370740611EF3 /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C242F8DBE28919CD9D5D5 /* Clock.swift */; };
 		AE7C2757750291B7468C0BFA /* PostRepositoryShould.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2955D34BC38ABF43DB38 /* PostRepositoryShould.swift */; };
 		AE7C28E91F3EBF92B866A9C4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C252F85B574991C7DEB97 /* User.swift */; };
 		AE7C2A1287AB3F11801374DA /* InputShould.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C298DAC03DF16CF9DB180 /* InputShould.swift */; };
@@ -50,9 +53,11 @@
 		074BE6CF1CAC5B01004AEEDE /* SocialNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialNetwork.swift; sourceTree = "<group>"; };
 		AE7C22B087149547BBC09D98 /* ActionSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSpy.swift; sourceTree = "<group>"; };
 		AE7C23F9C20906A726A8E0A6 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		AE7C242F8DBE28919CD9D5D5 /* Clock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
 		AE7C252F85B574991C7DEB97 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AE7C2955D34BC38ABF43DB38 /* PostRepositoryShould.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostRepositoryShould.swift; sourceTree = "<group>"; };
 		AE7C298DAC03DF16CF9DB180 /* InputShould.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputShould.swift; sourceTree = "<group>"; };
+		AE7C29FECE98DC2AE83876FE /* TestableClock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestableClock.swift; sourceTree = "<group>"; };
 		AE7C2B3D4BBF77B895647B0E /* PostRepositorySpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostRepositorySpy.swift; sourceTree = "<group>"; };
 		AE7C2B4D313FE1FD97A9CCBF /* PostAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostAction.swift; sourceTree = "<group>"; };
 		AE7C2BB8D00911D51622967D /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
@@ -92,6 +97,7 @@
 				AE7C2955D34BC38ABF43DB38 /* PostRepositoryShould.swift */,
 				AE7C2BC1AAA168286406923A /* actions */,
 				AE7C2F799188171C428CD478 /* model */,
+				AE7C29FECE98DC2AE83876FE /* TestableClock.swift */,
 			);
 			path = SocialNetworkKataTest;
 			sourceTree = "<group>";
@@ -113,6 +119,7 @@
 				AE7C2BB8D00911D51622967D /* Action.swift */,
 				AE7C2109387BDA7E5C45DCD7 /* actions */,
 				AE7C2798BC5641532FFE1FF7 /* model */,
+				AE7C242F8DBE28919CD9D5D5 /* Clock.swift */,
 			);
 			path = SocialNetworkKata;
 			sourceTree = "<group>";
@@ -269,6 +276,8 @@
 				AE7C2757750291B7468C0BFA /* PostRepositoryShould.swift in Sources */,
 				AE7C21D2452E053BAABE1980 /* PostActionShould.swift in Sources */,
 				AE7C2A1287AB3F11801374DA /* InputShould.swift in Sources */,
+				AE7C26F45EFA25A8B81DB8A8 /* Clock.swift in Sources */,
+				AE7C20A5B1985CD2C3F1BFE6 /* TestableClock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +293,7 @@
 				AE7C210C87DCBF56F92D5BE0 /* Post.swift in Sources */,
 				AE7C28E91F3EBF92B866A9C4 /* User.swift in Sources */,
 				AE7C2F08C0D4F4872CD78405 /* PostRepository.swift in Sources */,
+				AE7C271FC239370740611EF3 /* Clock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

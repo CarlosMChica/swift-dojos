@@ -13,6 +13,14 @@ import XCTest
 
 class PostingFeature: XCTestCase {
 
+  private let aTimestamp = 12312312312
+  private var clock: Clock!
+
+  override func setUp() {
+    super.setUp()
+    clock = TestableClock(timestamp: aTimestamp)
+  }
+
   /*
   * Scenario 1:
 
@@ -31,7 +39,7 @@ class PostingFeature: XCTestCase {
 
     socialNetwork.execute(input)
 
-    let expectPost = Post(user: user, message: message)
+    let expectPost = Post(user: user, message: message, timestamp: aTimestamp)
     let expectedTimeline = [Post](arrayLiteral: expectPost)
     XCTAssertEqual(expectedTimeline, postRepository.timelineOf(user))
   }
@@ -50,7 +58,7 @@ class PostingFeature: XCTestCase {
   }
 
   private func givenPostActionWith(postRepository: PostRepository) -> PostAction {
-    return PostAction(postRepository: postRepository)
+    return PostAction(postRepository: postRepository, clock: clock)
   }
 
   private func givenPostsRepository() -> PostRepository {

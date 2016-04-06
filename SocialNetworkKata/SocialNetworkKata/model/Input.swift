@@ -18,6 +18,7 @@ struct Input: Equatable {
   }
 
   func getIdentifierArgument(identifier: String) -> String? {
+    NSDate().timeIntervalSince1970
     let arguments = input.componentsSeparatedByString(identifier)
     return arguments.count > 1 ? arguments[1].trim() : nil
   }

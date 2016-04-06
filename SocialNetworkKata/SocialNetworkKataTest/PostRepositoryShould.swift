@@ -3,6 +3,7 @@ import XCTest
 class PostRepositoryShould: XCTestCase {
 
   private let aMessage = "message"
+  private let aTimestamp = 12312321
   private let repository = PostRepository()
 
   func test_return_empty_timeline_for_user_without_posts() {
@@ -37,7 +38,7 @@ class PostRepositoryShould: XCTestCase {
   }
 
   func givenAPostFrom(user: User) -> Post {
-    return Post(user: user, message: aMessage)
+    return Post(user: user, message: aMessage, timestamp: aTimestamp)
   }
 
   func givenAUser() -> User {

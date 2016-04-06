@@ -6,11 +6,13 @@ class PostActionShould: XCTestCase {
   private let userName = "userName"
   private let message = "message"
   private let invalidInput = "awdwad"
-
+  private let timestamp: CLong = 123123123
+  private var clock: Clock!
   private var validInput: String!
 
   override func setUp() {
     super.setUp()
+    clock = TestableClock(timestamp: timestamp)
     validInput = userName + " " + arrow + " " + message
   }
 
@@ -32,14 +34,14 @@ class PostActionShould: XCTestCase {
     XCTAssertFalse(canExecute)
   }
 
-  func test_store_post_when_executed() {
+  func test_store_post_with_current_timestamp_when_executed() {
     let postRepository = givenPostRepository()
     let action = givenPostAction(postRepository)
     let input = givenValidInput()
 
     action.execute(input)
 
-    let expectedPost = Post(user: User(name: userName), message: message)
+    let expectedPost = Post(user: User(name: userName), message: message, timestamp: timestamp)
     XCTAssertTrue(postRepository.storeCalled)
     XCTAssertEqual(expectedPost, postRepository.storedPost)
   }
@@ -49,11 +51,11 @@ class PostActionShould: XCTestCase {
   }
 
   private func givenPostAction() -> PostAction {
-    return PostAction(postRepository: givenPostRepository())
+    return PostAction(postRepository: givenPostRepository(), clock: clock)
   }
 
   private func givenPostAction(postRepository: PostRepository) -> PostAction {
-    return PostAction(postRepository: postRepository)
+    return PostAction(postRepository: postRepository, clock: clock)
   }
 
   private func givenValidInput() -> Input {
