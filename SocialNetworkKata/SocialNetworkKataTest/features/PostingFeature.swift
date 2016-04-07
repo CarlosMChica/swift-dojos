@@ -2,7 +2,7 @@ import XCTest
 
 /*
 * User story
-* Title: Posting messages to timeline
+* Title: Posting messages to user timeline
 * As a user
 * I want to be able to post messages
 * So that I can publish messages to my timeline
