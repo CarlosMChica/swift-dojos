@@ -8,7 +8,7 @@ import XCTest
 * So that I can check the messages that I've published to my timeline
 */
 
-class ReadingTimelineFeature: XCTestCase {
+class ReadTimelineFeature: XCTestCase {
 
   private var firstMessage: String!
   private var secondMessage: String!
@@ -56,8 +56,8 @@ class ReadingTimelineFeature: XCTestCase {
 
   func givenActions() -> [Action] {
     let postRepository = givenPostsRepository()
-    let postAction = PostAction(postRepository: postRepository, clock: clock)
-    let readAction = ReadAction(postRepository: postRepository, view: view)
+    let postAction = PostMessageAction(postRepository: postRepository, clock: clock)
+    let readAction = ReadTimelineAction(postRepository: postRepository, view: view)
     return [Action](arrayLiteral: postAction, readAction)
   }
 

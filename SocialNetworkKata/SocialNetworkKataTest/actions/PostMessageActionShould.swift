@@ -1,6 +1,6 @@
 import XCTest
 
-class PostActionShould: XCTestCase {
+class PostMessageActionShould: XCTestCase {
 
   private let arrow = "->"
   private let userName = "userName"
@@ -50,12 +50,12 @@ class PostActionShould: XCTestCase {
     return PostRepositorySpy()
   }
 
-  private func givenPostAction() -> PostAction {
-    return PostAction(postRepository: givenPostRepository(), clock: clock)
+  private func givenPostAction() -> PostMessageAction {
+    return PostMessageAction(postRepository: givenPostRepository(), clock: clock)
   }
 
-  private func givenPostAction(postRepository: PostRepository) -> PostAction {
-    return PostAction(postRepository: postRepository, clock: clock)
+  private func givenPostAction(postRepository: PostRepository) -> PostMessageAction {
+    return PostMessageAction(postRepository: postRepository, clock: clock)
   }
 
   private func givenValidInput() -> Input {

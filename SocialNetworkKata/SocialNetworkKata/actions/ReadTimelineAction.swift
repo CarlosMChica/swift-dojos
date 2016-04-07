@@ -1,4 +1,4 @@
-class ReadAction: Action {
+class ReadTimelineAction: Action {
 
   private let view: View
   private let postRepository: PostRepository

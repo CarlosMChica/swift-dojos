@@ -7,7 +7,7 @@ import XCTest
 * I want to be able to post messages
 * So that I can publish messages to my timeline
 */
-class PostingMessagesFeature: XCTestCase {
+class PostMessagesFeature: XCTestCase {
 
   private let aTimestamp = 12312312312
   private var clock: Clock!
@@ -45,13 +45,13 @@ class PostingMessagesFeature: XCTestCase {
     return "Damn! We lost!"
   }
 
-  private func givenSocialNetworkWithPostAction(postAction: PostAction) -> SocialNetwork {
+  private func givenSocialNetworkWithPostAction(postAction: PostMessageAction) -> SocialNetwork {
     let actions = [Action](arrayLiteral: postAction)
     return SocialNetwork(actions: actions)
   }
 
-  private func givenPostActionWith(postRepository: PostRepository) -> PostAction {
-    return PostAction(postRepository: postRepository, clock: clock)
+  private func givenPostActionWith(postRepository: PostRepository) -> PostMessageAction {
+    return PostMessageAction(postRepository: postRepository, clock: clock)
   }
 
   private func givenPostsRepository() -> PostRepository {

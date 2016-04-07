@@ -1,4 +1,4 @@
-class PostAction: Action {
+class PostMessageAction: Action {
 
   private let identifier = "->"
   private let postRepository: PostRepository
