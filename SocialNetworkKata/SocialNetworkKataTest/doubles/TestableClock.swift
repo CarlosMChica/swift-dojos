@@ -1,13 +1,18 @@
 class TestableClock: Clock {
 
-  private let timestamp: CLong
+  private let timestamps: [CLong]
+  private var currentTimestamp = 0
+
+  init(timestamps: [CLong]) {
+    self.timestamps = timestamps
+  }
 
   init(timestamp: CLong) {
-    self.timestamp = timestamp
+    self.timestamps = [CLong](arrayLiteral: timestamp)
   }
 
   override func currentTimeInMillis() -> CLong {
-    return timestamp
+    return timestamps[currentTimestamp++]
   }
 
 }
