@@ -16,7 +16,7 @@ class PostMessageActionShould: XCTestCase {
     validInput = userName + " " + arrow + " " + message
   }
 
-  func test_return_can_execute_true_for_action_with_arrow_as_first_parameter() {
+  func test_return_can_execute_true_for_input_with_arrow_as_first_parameter() {
     let action = givenPostAction()
     let input = givenValidInput()
 
@@ -25,7 +25,7 @@ class PostMessageActionShould: XCTestCase {
     XCTAssertTrue(canExecute)
   }
 
-  func test_return_can_execute_false_for_action_without_arrow_as_first_parameter() {
+  func test_return_can_execute_false_for_input_without_arrow_as_first_parameter() {
     let action = givenPostAction()
     let input = givenInvalidInput()
 
