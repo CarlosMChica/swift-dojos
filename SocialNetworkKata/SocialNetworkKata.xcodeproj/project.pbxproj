@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		074BE6D01CAC5B01004AEEDE /* SocialNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074BE6CF1CAC5B01004AEEDE /* SocialNetwork.swift */; };
 		074BE6D11CAC5B01004AEEDE /* SocialNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074BE6CF1CAC5B01004AEEDE /* SocialNetwork.swift */; };
+		AE7C207FC6B705F39C1A9603 /* TimelinePrinterShould.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C26A7F23D5BB14C57D0DF /* TimelinePrinterShould.swift */; };
 		AE7C20970B245AA66A0BCC86 /* TimelinePrinterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2F80B82CB43E4A7394D0 /* TimelinePrinterSpy.swift */; };
 		AE7C210C87DCBF56F92D5BE0 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C23F9C20906A726A8E0A6 /* Post.swift */; };
 		AE7C21273B61F887F7CE64A5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C23F9C20906A726A8E0A6 /* Post.swift */; };
@@ -65,6 +66,7 @@
 		AE7C23F9C20906A726A8E0A6 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		AE7C242F8DBE28919CD9D5D5 /* Clock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
 		AE7C252F85B574991C7DEB97 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AE7C26A7F23D5BB14C57D0DF /* TimelinePrinterShould.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelinePrinterShould.swift; sourceTree = "<group>"; };
 		AE7C28913DD6ABF59E966559 /* TimelinePrinter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelinePrinter.swift; sourceTree = "<group>"; };
 		AE7C28BA99C552BF55026A09 /* ReadTimelineAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadTimelineAction.swift; sourceTree = "<group>"; };
 		AE7C298DAC03DF16CF9DB180 /* InputShould.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputShould.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				AE7C2BC1AAA168286406923A /* actions */,
 				AE7C2F799188171C428CD478 /* model */,
 				AE7C2DC23EA6C69F01F9D235 /* features */,
+				AE7C26A7F23D5BB14C57D0DF /* TimelinePrinterShould.swift */,
 			);
 			path = SocialNetworkKataTest;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				AE7C27BFBF15A86EEA007D3B /* ReadTimelineActionShould.swift in Sources */,
 				AE7C2B59F340D7006CA798CE /* TimelinePrinter.swift in Sources */,
 				AE7C20970B245AA66A0BCC86 /* TimelinePrinterSpy.swift in Sources */,
+				AE7C207FC6B705F39C1A9603 /* TimelinePrinterShould.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
