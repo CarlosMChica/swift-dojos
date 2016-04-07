@@ -7,8 +7,7 @@ import XCTest
 * I want to be able to post messages
 * So that I can publish messages to my timeline
 */
-
-class PostingFeature: XCTestCase {
+class PostingMessagesFeature: XCTestCase {
 
   private let aTimestamp = 12312312312
   private var clock: Clock!
