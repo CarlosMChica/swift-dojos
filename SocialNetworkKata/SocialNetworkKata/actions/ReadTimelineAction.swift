@@ -9,7 +9,7 @@ class ReadTimelineAction: Action {
   }
 
   func canExecute(input: Input) -> Bool {
-    return false
+    return input.hasSingleArgument()
   }
 
   func execute(input: Input) {
