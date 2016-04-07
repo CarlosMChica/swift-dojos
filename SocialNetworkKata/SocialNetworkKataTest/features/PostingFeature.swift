@@ -19,7 +19,7 @@ class PostingMessagesFeature: XCTestCase {
 
   /*
   * Scenario 1:
-  * Given then user Bob
+  * Given the user Bob
   * When user publish the message "Damn! We lost!" ( Bob -> Damn! We lost! )
   * Then the user timeline should contain post
   */
