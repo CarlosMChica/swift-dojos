@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		074BE6D01CAC5B01004AEEDE /* SocialNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074BE6CF1CAC5B01004AEEDE /* SocialNetwork.swift */; };
 		074BE6D11CAC5B01004AEEDE /* SocialNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074BE6CF1CAC5B01004AEEDE /* SocialNetwork.swift */; };
+		AE7C20970B245AA66A0BCC86 /* TimelinePrinterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2F80B82CB43E4A7394D0 /* TimelinePrinterSpy.swift */; };
 		AE7C210C87DCBF56F92D5BE0 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C23F9C20906A726A8E0A6 /* Post.swift */; };
 		AE7C21273B61F887F7CE64A5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C23F9C20906A726A8E0A6 /* Post.swift */; };
 		AE7C21D2452E053BAABE1980 /* PostMessageActionShould.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2BF458F21A783919E321 /* PostMessageActionShould.swift */; };
@@ -26,11 +27,13 @@
 		AE7C2A1287AB3F11801374DA /* InputShould.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C298DAC03DF16CF9DB180 /* InputShould.swift */; };
 		AE7C2A46CE012D6C9FF61F9D /* ReadTimelineFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2E4D6FE747082FFBF708 /* ReadTimelineFeature.swift */; };
 		AE7C2AB1FC5B69D9080609A0 /* PostMessagesFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2B44DF002B5BD21F75C7 /* PostMessagesFeature.swift */; };
+		AE7C2B59F340D7006CA798CE /* TimelinePrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C28913DD6ABF59E966559 /* TimelinePrinter.swift */; };
 		AE7C2BCCE36CB8CA9F3AA3E9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C252F85B574991C7DEB97 /* User.swift */; };
 		AE7C2BD561516AF6A784B919 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2BB8D00911D51622967D /* Action.swift */; };
 		AE7C2BDFF43C57FB8580F4CB /* ReadTimelineAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C28BA99C552BF55026A09 /* ReadTimelineAction.swift */; };
 		AE7C2C263C1FEACEDD2566DD /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2FDF47AE01334B1692AE /* View.swift */; };
 		AE7C2C768FFE79A0799E027C /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2D4E9B1AD43C0D955A1E /* Input.swift */; };
+		AE7C2C92C54E803152FCB2DF /* TimelinePrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C28913DD6ABF59E966559 /* TimelinePrinter.swift */; };
 		AE7C2C965BF590E05AA88EA9 /* PostRepositoryShould.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2274E9676B956C9D62F0 /* PostRepositoryShould.swift */; };
 		AE7C2D84E0721DA2455D10BF /* PostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2E207B613CF506BE3A20 /* PostRepository.swift */; };
 		AE7C2E244F9E65045492716D /* PostMessageAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7C2B4D313FE1FD97A9CCBF /* PostMessageAction.swift */; };
@@ -62,6 +65,7 @@
 		AE7C23F9C20906A726A8E0A6 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		AE7C242F8DBE28919CD9D5D5 /* Clock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
 		AE7C252F85B574991C7DEB97 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AE7C28913DD6ABF59E966559 /* TimelinePrinter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelinePrinter.swift; sourceTree = "<group>"; };
 		AE7C28BA99C552BF55026A09 /* ReadTimelineAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadTimelineAction.swift; sourceTree = "<group>"; };
 		AE7C298DAC03DF16CF9DB180 /* InputShould.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputShould.swift; sourceTree = "<group>"; };
 		AE7C2B3D4BBF77B895647B0E /* PostRepositorySpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostRepositorySpy.swift; sourceTree = "<group>"; };
@@ -77,6 +81,7 @@
 		AE7C2E4D6FE747082FFBF708 /* ReadTimelineFeature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadTimelineFeature.swift; sourceTree = "<group>"; };
 		AE7C2F5936528181B6BD58E4 /* SocialNetworkShould.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialNetworkShould.swift; sourceTree = "<group>"; };
 		AE7C2F73982DEB80AA68A3F0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		AE7C2F80B82CB43E4A7394D0 /* TimelinePrinterSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelinePrinterSpy.swift; sourceTree = "<group>"; };
 		AE7C2FDF47AE01334B1692AE /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		AE7C2FE5D578A6EA5CED7A22 /* ViewSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewSpy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,6 +124,7 @@
 				AE7C2B3D4BBF77B895647B0E /* PostRepositorySpy.swift */,
 				AE7C2E2141450174F9CDD543 /* TestableClock.swift */,
 				AE7C2FE5D578A6EA5CED7A22 /* ViewSpy.swift */,
+				AE7C2F80B82CB43E4A7394D0 /* TimelinePrinterSpy.swift */,
 			);
 			path = doubles;
 			sourceTree = "<group>";
@@ -133,6 +139,7 @@
 				AE7C2798BC5641532FFE1FF7 /* model */,
 				AE7C242F8DBE28919CD9D5D5 /* Clock.swift */,
 				AE7C2FDF47AE01334B1692AE /* View.swift */,
+				AE7C28913DD6ABF59E966559 /* TimelinePrinter.swift */,
 			);
 			path = SocialNetworkKata;
 			sourceTree = "<group>";
@@ -308,6 +315,8 @@
 				AE7C2FAC169741AAE269F960 /* ViewSpy.swift in Sources */,
 				AE7C2BDFF43C57FB8580F4CB /* ReadTimelineAction.swift in Sources */,
 				AE7C27BFBF15A86EEA007D3B /* ReadTimelineActionShould.swift in Sources */,
+				AE7C2B59F340D7006CA798CE /* TimelinePrinter.swift in Sources */,
+				AE7C20970B245AA66A0BCC86 /* TimelinePrinterSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +335,7 @@
 				AE7C271FC239370740611EF3 /* Clock.swift in Sources */,
 				AE7C2332DF57C0FFC42A2EF8 /* View.swift in Sources */,
 				AE7C2EEECBF74731D478A1A5 /* ReadTimelineAction.swift in Sources */,
+				AE7C2C92C54E803152FCB2DF /* TimelinePrinter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

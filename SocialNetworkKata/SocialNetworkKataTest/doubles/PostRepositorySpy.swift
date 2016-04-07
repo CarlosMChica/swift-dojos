@@ -1,10 +1,19 @@
 class PostRepositorySpy: PostRepository {
 
   var storeCalled = false
-  var timelineOfCalled = false
-
   var storedPost: Post!
+  var timelineOfCalled = false
   var timelineLoadedOfUser: User!
+
+  let timelinePosts: [Post]
+
+  override init() {
+    timelinePosts = [Post]()
+  }
+
+  init(posts: [Post]) {
+    self.timelinePosts = posts
+  }
 
   override func store(post: Post) {
     storeCalled = true
@@ -14,7 +23,7 @@ class PostRepositorySpy: PostRepository {
   override func timelineOf(user: User) -> [Post] {
     timelineOfCalled = true
     timelineLoadedOfUser = user
-    return super.timelineOf(user)
+    return timelinePosts
   }
 
 }

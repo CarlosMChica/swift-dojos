@@ -17,11 +17,13 @@ class ReadTimelineFeature: XCTestCase {
   private var postSecondMessage: Input!
   private var clock: Clock!
   private var socialNetwork: SocialNetwork!
+  private var printer: TimelinePrinter!
 
   private let view = ViewSpy()
 
   override func setUp() {
     super.setUp()
+    printer = TimelinePrinter(view: view)
     firstMessage = givenFirstMessage()
     secondMessage = givenSecondMessage()
     readBobTimeline = givenReadBobTimelineInput()
@@ -57,7 +59,7 @@ class ReadTimelineFeature: XCTestCase {
   func givenActions() -> [Action] {
     let postRepository = givenPostsRepository()
     let postAction = PostMessageAction(postRepository: postRepository, clock: clock)
-    let readAction = ReadTimelineAction(postRepository: postRepository, view: view)
+    let readAction = ReadTimelineAction(postRepository: postRepository, printer: printer)
     return [Action](arrayLiteral: postAction, readAction)
   }
 

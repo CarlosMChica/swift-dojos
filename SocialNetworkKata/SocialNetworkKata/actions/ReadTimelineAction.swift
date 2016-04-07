@@ -1,10 +1,10 @@
 class ReadTimelineAction: Action {
 
-  private let view: View
   private let postRepository: PostRepository
+  private let printer: TimelinePrinter
 
-  init(postRepository: PostRepository, view: View) {
-    self.view = view
+  init(postRepository: PostRepository, printer: TimelinePrinter) {
+    self.printer = printer
     self.postRepository = postRepository
   }
 
@@ -13,6 +13,9 @@ class ReadTimelineAction: Action {
   }
 
   func execute(input: Input) {
+    let user = User(name: input.getFirstArgument())
+    let timelinePosts = postRepository.timelineOf(user)
+    printer.print(timelinePosts)
   }
 
 }
