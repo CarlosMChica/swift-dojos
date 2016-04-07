@@ -2,13 +2,10 @@ import XCTest
 
 /*
 * User story
-
 * Title: Posting messages to timeline
-
 * As a user
 * I want to be able to post messages
 * So that I can publish messages to my timeline
-
 */
 
 class PostingFeature: XCTestCase {
@@ -23,11 +20,8 @@ class PostingFeature: XCTestCase {
 
   /*
   * Scenario 1:
-
   * Given then user Bob
-
   * When user publish the message "Damn! We lost!" ( Bob -> Damn! We lost! )
-
   * Then the user timeline should contain post
   */
   func testShouldPublishMessageToUserTimeline() {
