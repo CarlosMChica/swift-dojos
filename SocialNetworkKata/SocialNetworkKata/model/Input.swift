@@ -13,6 +13,10 @@ struct Input: Equatable {
     return input.containsString(identifier)
   }
 
+  func hasSingleArgument() -> Bool {
+    return !input.containsString(String(argumentsSeparator))
+  }
+
   func getFirstArgument() -> String {
     return input.characters.split(argumentsSeparator).map(String.init)[0]
   }
